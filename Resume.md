@@ -1,0 +1,84 @@
+# SHENG-WEN TSAI (Giggs)
+
+* 0910-671156
+* giggs.tsai@gmail.com
+* Taipei, Taiwan
+
+# SKILLS
+- Android (Java)
+- iOS (Swift)
+- Java：JAX-RS, CDI, EJB 3.x, JTA, JPA, ORM
+- Shell Script
+- PLSQL
+- Server: NGINX, Tomcat, WebLogic
+- Database: MySQL、Oracle Database
+- VCS: Subversion, Git
+- Build Tool: Gradle, Maven
+- CI: Jenkins
+
+# **EXPERIENCE**
+
+## Unistar Talent Ltd., Taipei, Taiwan *- Consultant Software Engineer*
+
+Oct. 2014 - PRESENT
+
+* Mobile Platform and Application (Sep. 2015 - PRESENT)
+    * Collaborate with backend teams to define, design, and ship new feature.
+    * Design and implement native applicatons for Android platform.
+    * Design and implement native applicatons for iOS platform.
+        1. Experience with Swift, experience implementing iOS design patterns like MVC, MVVM, etc.
+        2. Experience with UIKit, Foundation, etc Knowledge of multi-threaded and asynchronous code.
+        3. Create View by InterfaceBuilder, AutoLayout, CoreGraphic, CoreAnimation.
+        4. External Accessory Framework such as XCGLogger, SwiftyJson, KeychainAccess And managed by Carthage and Cocoapods.
+        5. Profiling memory with Instruments to resolve memory leak, zombie memory.
+        6. Using View Inspector to resolve view's problem.
+        7. Provisioning profile administration done for Ad-Hoc, In-House builds.
+    * Continuous integration mechanism set up with jenkins.
+    * Collect crash log with Fabric/Crashlytics and resolve problem.
+    * Collect user behavior with Google Analytics.
+    * Notification Push Server design and implement.
+        1. Socket programing with Java.
+        2. Support Android directly via socket, iOS via APNS using 3rd library.
+        3. A simple web page to monitor status.
+* Starwin (Aug. 2016 - Sep. 2016)
+    * Implement backend server with vendor service.
+    * Design and implement Android App.
+* Platform 2.0 (Oct. 2014 - Sep. 2015)
+    * API design, performance and scalability tuning.
+    * Schema design, Query tuning and optimization.
+    * Lottery draw logic, design and implement. (PLSQL/SP)
+    * Floating price system, design and implement.
+    * Test with JUnit, JBehavior.
+    * Write server build script with shell script and python.
+
+## eLand Technologies Corporation Ltd., Taipei, Taiwan *- Java Software Engineer*
+
+Dec. 2012 - Oct. 2014
+
+* Software development
+    * Design and implement a web crawler with Java.
+    * Using Sniffer to find website's data api.
+    * Work with the data vendor to design and implement data feed handler.
+        1. FTP
+        2. RSS
+        3. Stream data over Socket
+        4. Vendor's data api
+* Managment
+    * Server Management.
+        1. Database(MySQL, MsSQL)
+        2. FTP server
+        3. Application Server
+    * Project planning, executing and release, leading 1 member.
+
+# **EDUCATION**
+
+## Feng Chia University, Taichung, Taiwan *- B.S.*
+
+Sep. 2007 - Jun. 2011
+
+Department of Information Engineering and Computer Science
+
+
+
+
+
