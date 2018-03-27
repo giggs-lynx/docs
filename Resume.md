@@ -4,6 +4,8 @@
 * giggs.tsai@gmail.com
 * Taipei, Taiwan
 
+---
+
 # SKILLS
 - Android (Java)
 - iOS (Swift)
@@ -16,15 +18,21 @@
 - Build Tool: Gradle, Maven
 - CI: Jenkins
 
+---
+
 # **EXPERIENCE**
 
-## Unistar Talent Ltd., Taipei, Taiwan *- Consultant Software Engineer*
+### Unistar Talent Ltd., Taipei, Taiwan *- Consultant Software Engineer*
 
 Oct. 2014 - PRESENT
 
 * Mobile Platform and Application (Sep. 2015 - PRESENT)
     * Collaborate with backend teams to define, design, and ship new feature.
     * Design and implement native applicatons for Android platform.
+        1. Experience with Java, experience implementing Android design patterns with MVC.
+        2. Participated in Designing and Developing UI workflow using Activity and Fragments.
+        3. Developed rich UI for the applications modules using RecyclerView, Scroll View, View Pager & Navigation Drawer and developed Custom View.
+        4. External Accessory Framework such as Retrofit, OKHttp, EventBus And managed by Gradle.
     * Design and implement native applicatons for iOS platform.
         1. Experience with Swift, experience implementing iOS design patterns like MVC, MVVM, etc.
         2. Experience with UIKit, Foundation, etc Knowledge of multi-threaded and asynchronous code.
@@ -51,7 +59,7 @@ Oct. 2014 - PRESENT
     * Test with JUnit, JBehavior.
     * Write server build script with shell script and python.
 
-## eLand Technologies Corporation Ltd., Taipei, Taiwan *- Java Software Engineer*
+### eLand Technologies Corporation Ltd., Taipei, Taiwan *- Java Software Engineer*
 
 Dec. 2012 - Oct. 2014
 
@@ -70,9 +78,11 @@ Dec. 2012 - Oct. 2014
         3. Application Server
     * Project planning, executing and release, leading 1 member.
 
+---
+
 # **EDUCATION**
 
-## Feng Chia University, Taichung, Taiwan *- B.S.*
+### Feng Chia University, Taichung, Taiwan *- B.S.*
 
 Sep. 2007 - Jun. 2011
 
