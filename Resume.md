@@ -4,7 +4,7 @@
 * giggs.tsai@gmail.com
 * Taipei, Taiwan
 
----
+---
 
 # SKILLS
 - Android (Java)
