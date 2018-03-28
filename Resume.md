@@ -49,11 +49,11 @@ Oct. 2014 - PRESENT
     * Collect crash log with Fabric/Crashlytics and resolve problem.
     * Collect user behavior with Google Analytics.
     * <details markdown="1"><summary>Notification Push Server design and implement.</summary>
-
+    
         1. Socket programing with Java.
         2. Support Android directly via socket, iOS via APNS using 3rd library.
         3. A simple web page to monitor status.
-        </detail>
+        </details>
 * Starwin (Aug. 2016 - Sep. 2016)
     * Implement backend server with vendor service.
     * Design and implement Android App.
