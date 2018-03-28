@@ -28,26 +28,35 @@ Oct. 2014 - PRESENT
 
 * Mobile Platform and Application (Sep. 2015 - PRESENT)
     * Collaborate with backend teams to define, design, and ship new feature.
-    * Design and implement native applicatons for Android platform.
+    * <details><summary>Design and implement native applicatons for Android platform.</summary>
+
         1. Experience with Java, experience implementing Android design patterns with MVC.
         2. Participated in Designing and Developing UI workflow using Activity and Fragments.
         3. Developed rich UI for the applications modules using RecyclerView, Scroll View, View Pager & Navigation Drawer and developed Custom View.
         4. External Accessory Framework such as Retrofit, OKHttp, EventBus And managed by Gradle.
-    * Design and implement native applicatons for iOS platform.
+
+        </details>
+    * <details><summary>Design and implement native applicatons for iOS platform.</summary>
+
         1. Experience with Swift, experience implementing iOS design patterns like MVC, MVVM, etc.
         2. Experience with UIKit, Foundation, etc Knowledge of multi-threaded and asynchronous code.
         3. Create View by InterfaceBuilder, AutoLayout, CoreGraphic, CoreAnimation.
         4. External Accessory Framework such as XCGLogger, SwiftyJson, KeychainAccess And managed by Carthage and Cocoapods.
         5. Profiling memory with Instruments to resolve memory leak, zombie memory.
         6. Using View Inspector to resolve view's problem.
-        7. Provisioning profile administration done for Ad-Hoc, In-House builds.
+        6. Provisioning profile administration done for Ad-Hoc, In-House builds.
+
+        </details>
     * Continuous integration mechanism set up with jenkins.
     * Collect crash log with Fabric/Crashlytics and resolve problem.
     * Collect user behavior with Google Analytics.
-    * Notification Push Server design and implement.
+    * <details><summary>Notification Push Server design and implement.</summary>
+
         1. Socket programing with Java.
         2. Support Android directly via socket, iOS via APNS using 3rd library.
         3. A simple web page to monitor status.
+
+        </detail>
 * Starwin (Aug. 2016 - Sep. 2016)
     * Implement backend server with vendor service.
     * Design and implement Android App.
