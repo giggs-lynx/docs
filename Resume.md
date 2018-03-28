@@ -28,14 +28,14 @@ Oct. 2014 - PRESENT
 
 * Mobile Platform and Application (Sep. 2015 - PRESENT)
     * Collaborate with backend teams to define, design, and ship new feature.
-    * <details><summary>Design and implement native applicatons for Android platform.</summary>
-    
+    * <details markdown="1"><summary>Design and implement native applicatons for Android platform.</summary>
+
         1. Experience with Java, experience implementing Android design patterns with MVC.
         2. Participated in Designing and Developing UI workflow using Activity and Fragments.
         3. Developed rich UI for the applications modules using RecyclerView, Scroll View, View Pager & Navigation Drawer and developed Custom View.
         4. External Accessory Framework such as Retrofit, OKHttp, EventBus And managed by Gradle.
         </details>
-    * <details><summary>Design and implement native applicatons for iOS platform.</summary>
+    * <details markdown="1"><summary>Design and implement native applicatons for iOS platform.</summary>
 
         1. Experience with Swift, experience implementing iOS design patterns like MVC, MVVM, etc.
         2. Experience with UIKit, Foundation, etc Knowledge of multi-threaded and asynchronous code.
@@ -48,7 +48,7 @@ Oct. 2014 - PRESENT
     * Continuous integration mechanism set up with jenkins.
     * Collect crash log with Fabric/Crashlytics and resolve problem.
     * Collect user behavior with Google Analytics.
-    * <details><summary>Notification Push Server design and implement.</summary>
+    * <details markdown="1"><summary>Notification Push Server design and implement.</summary>
 
         1. Socket programing with Java.
         2. Support Android directly via socket, iOS via APNS using 3rd library.
