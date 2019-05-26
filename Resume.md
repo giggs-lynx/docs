@@ -16,11 +16,26 @@
 - Database: MySQL、Oracle Database
 - VCS: Subversion, Git
 - Build Tool: Gradle, Maven
-- CI: Jenkins
+- CI: Jenkins, Xcode Server
 
 ---
 
 # **EXPERIENCE**
+
+## Noodoe Inc., Taipei, Taiwan *- iOS Senior Engineer*
+
+### Apr. 2018 - PRESENT
+
+* KYMCO Noodoe
+    * Design and implement iOS native applicatons with Swift, experience with MVC, Interface-Builder, AutoLayout, etc.
+    * Experience with `UIKit`, `CoreGraphics`, `CoreAnimation`, `Photos`, `MapKit`, `CoreLocation`, `ExternalAccessory`, `AVFoundation`, `Contacts`.
+    * External Framework such as `facebook-sdk`, `aws-sdk`, `ios-branch-deep-linking` and managed by Carthage.
+    * Integrating REST and GraphQL API.
+    * Profiling memory with Instruments to resolve memory leak, zombie memory.
+    * Using View-Inspector to resolve view's problem.
+    * Build App with Xcode Server and shell script.
+    * Collect and resolve crash issue via Organizer.
+    * Provisioning profile administration for App Store.
 
 ## Unistar Talent Ltd., Taipei, Taiwan *- Consultant Software Engineer*
 
@@ -33,14 +48,14 @@
         1. Experience with Java, experience implementing Android design patterns with MVC.
         2. Participated in Designing and Developing UI workflow using Activity and Fragments.
         3. Developed rich UI for the applications modules using RecyclerView, Scroll View, View Pager & Navigation Drawer and developed Custom View.
-        4. External Accessory Framework such as Retrofit, OKHttp, EventBus And managed by Gradle.
+        4. External Framework such as Retrofit, OKHttp, EventBus And managed by Gradle.
         </details>
     * <details markdown="1"><summary>Design and implement native applicatons for iOS platform.</summary>
 
         1. Experience with Swift, experience implementing iOS design patterns like MVC, MVVM, etc.
         2. Experience with UIKit, Foundation, etc Knowledge of multi-threaded and asynchronous code.
         3. Create View by InterfaceBuilder, AutoLayout, CoreGraphic, CoreAnimation.
-        4. External Accessory Framework such as XCGLogger, SwiftyJson, KeychainAccess And managed by Carthage and Cocoapods.
+        4. External Framework such as XCGLogger, SwiftyJson, KeychainAccess And managed by Carthage and Cocoapods.
         5. Profiling memory with Instruments to resolve memory leak, zombie memory.
         6. Using View Inspector to resolve view's problem.
         7. Provisioning profile administration done for Ad-Hoc, In-House builds.
@@ -54,7 +69,7 @@
         2. Support Android directly via socket, iOS via APNS using 3rd library.
         3. A simple web page to monitor status.
         </details>
-* Starwin (Aug. 2016 - Sep. 2016)
+* Starwin(A custom project) (Aug. 2016 - Sep. 2016)
     * Implement backend server with vendor service.
     * Design and implement Android App.
 * Platform 2.0 (Oct. 2014 - Sep. 2015)
