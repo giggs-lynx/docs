@@ -22,9 +22,9 @@
 
 # **EXPERIENCE**
 
-### Unistar Talent Ltd., Taipei, Taiwan *- Consultant Software Engineer*
+## Unistar Talent Ltd., Taipei, Taiwan *- Consultant Software Engineer*
 
-Oct. 2014 - PRESENT
+### Oct. 2014 - Apr. 2018
 
 * Mobile Platform and Application (Sep. 2015 - PRESENT)
     * Collaborate with backend teams to define, design, and ship new feature.
@@ -65,9 +65,9 @@ Oct. 2014 - PRESENT
     * Test with JUnit, JBehavior.
     * Write server build script with shell script and python.
 
-### eLand Technologies Corporation Ltd., Taipei, Taiwan *- Java Software Engineer*
+## eLand Technologies Corporation Ltd., Taipei, Taiwan *- Java Software Engineer*
 
-Dec. 2012 - Oct. 2014
+### Dec. 2012 - Oct. 2014
 
 * Software development
     * Design and implement a web crawler with Java.
@@ -88,11 +88,11 @@ Dec. 2012 - Oct. 2014
 
 # **EDUCATION**
 
-### Feng Chia University, Taichung, Taiwan *- B.S.*
+## Feng Chia University, Taichung, Taiwan *- B.S.*
 
-Sep. 2007 - Jun. 2011
+### Sep. 2007 - Jun. 2011
 
-Department of Information Engineering and Computer Science
+* Department of Information Engineering and Computer Science
 
 
 
