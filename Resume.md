@@ -6,20 +6,6 @@
 
 ---
 
-# SKILLS
-- Android (Java)
-- iOS (Swift)
-- Java：JAX-RS, CDI, EJB 3.x, JTA, JPA, ORM
-- Shell Script
-- PLSQL
-- Server: NGINX, Tomcat, WebLogic
-- Database: MySQL、Oracle Database
-- VCS: Subversion, Git
-- Build Tool: Gradle, Maven
-- CI: Jenkins, Xcode Server
-
----
-
 # **EXPERIENCE**
 
 ## Noodoe Inc., Taipei, Taiwan *- iOS Senior Engineer*
@@ -28,12 +14,12 @@
 
 * KYMCO Noodoe
     * Design and implement iOS native applicatons with Swift, experience with MVC, Interface-Builder, AutoLayout, etc.
-    * Experience with `UIKit`, `CoreGraphics`, `CoreAnimation`, `Photos`, `MapKit`, `CoreLocation`, `ExternalAccessory`, `AVFoundation`, `Contacts`.
+    * Experience with `UIKit`, `CoreGraphics`, `CoreAnimation`, `Photos`, `MapKit`, `CoreLocation`, `AVFoundation`.
     * External Framework such as `facebook-sdk`, `aws-sdk`, `ios-branch-deep-linking` and managed by Carthage.
     * Integrating REST and GraphQL API.
     * Profiling memory with Instruments to resolve memory leak, zombie memory.
     * Using View-Inspector to resolve view's problem.
-    * Build App with Xcode Server and shell script.
+    * Build App with Xcode-Server and shell script.
     * Collect and resolve crash issue via Organizer.
     * Provisioning profile administration for App Store.
 
@@ -98,6 +84,20 @@
         2. FTP server
         3. Application Server
     * Project planning, executing and release, leading 1 member.
+
+---
+
+# SKILLS
+- Android (Java)
+- iOS (Swift)
+- Java：JAX-RS, CDI, EJB 3.x, JTA, JPA, ORM
+- Shell Script
+- PLSQL
+- Server: NGINX, Tomcat, WebLogic
+- Database: MySQL、Oracle Database
+- VCS: Subversion, Git
+- Build Tool: Gradle, Maven
+- CI: Jenkins, Xcode Server
 
 ---
 
