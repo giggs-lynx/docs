@@ -1,3 +1,3 @@
 # docs
 
-[Resume](Resume.md)
+[resume](resume.md)
