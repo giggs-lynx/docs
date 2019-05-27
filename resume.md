@@ -12,16 +12,17 @@
 
 ### Apr. 2018 - PRESENT
 
-* KYMCO Noodoe
-    * Design and implement iOS native applicatons with Swift, experience with MVC, Interface-Builder, AutoLayout, etc.
-    * Experience with `UIKit`, `CoreGraphics`, `CoreAnimation`, `Photos`, `MapKit`, `CoreLocation`, `AVFoundation`.
-    * External Framework such as `facebook-sdk`, `aws-sdk`, `ios-branch-deep-linking` and managed by Carthage.
-    * Integrating REST and GraphQL API.
-    * Profiling memory with Instruments to resolve memory leak, zombie memory.
-    * Using View-Inspector to resolve view's problem.
-    * Build App with Xcode-Server and shell script.
-    * Collect and resolve crash issue via Organizer.
-    * Provisioning profile administration for App Store.
+* [KYMCO Noodoe](https://www.kymco.com.tw/noodoe/en/index_en.html)
+    * **A scooter dashboard that communicates with smart phones to provide customized ridding experience.**
+    * Design and implement MVC based iOS native application in Swift.
+    * Co-work with firmware team to establish and implement Bluetooth protocol.
+    * Use `UIKit` along with storyboards, nibs and Auto Layout for UI implementation.
+    * Experience with `CoreGraphics`, `CoreAnimation` for advanced UI animations.
+    * Experience with `CoreBluetooth`, `ExternalAccessory` and MFI program for hardware communication.
+    * Implement Find my scooter, Journey and other custom dashboard creations using `Photos`, `MapKit`, `CoreLocation`, `AVFoundation` frameworks. 
+    * Integrate RESTful and GraphQL API to access cloud service
+    * Use Carthage to manage third party frameworks such as `facebook-sdk`, `aws-sdk`, `ios-branch-deep-linking` and so on.
+    * Create a tool to identify missing translation across localization files.
 
 ## Unistar Talent Ltd., Taipei, Taiwan *- Consultant Software Engineer*
 
