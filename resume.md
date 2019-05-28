@@ -28,7 +28,7 @@
 
 ### Oct. 2014 - Apr. 2018
 
-* Mobile Platform and Application (Sep. 2015 - PRESENT)
+* Mobile Platform and Application (Sep. 2015 - Apr. 2018)
     * Collaborate with backend teams to define, design, and ship new feature.
     * <details markdown="1"><summary>Design and implement native applicatons for Android platform.</summary>
 
