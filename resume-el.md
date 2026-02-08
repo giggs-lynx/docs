@@ -19,7 +19,7 @@
 - **Hardware & IoT:** Core Bluetooth (BLE), External Accessory (MFi), Core Location, MapKit.
 - **Full-Stack & Backend:** GraphQL (Subscription/WebSocket), RESTful API, Java, Oracle PL/SQL, Redis.
 - **DevOps & Automation:** Jenkins (jenkins-job-builder), XcodeGen, SPM, Carthage, CocoaPods.
-- **Specialties:** White-label App Systems, Dynamic Theming, Driving Behavior SDK (KMP) Integration.
+- **Specialties:** White-label App Systems, Dynamic Configuration, Driving Behavior SDK (KMP) Integration.
 
 ---
 
@@ -32,16 +32,18 @@
 - **KYMCO Noodoe Dashboard:**
   - Designed a modular framework to support multiple hardware generations (1.x & 2.x), ensuring long-term scalability and backward compatibility.
   - Optimized launch performance by **70%** and implemented core features: *Find My Scooter*, *My Journey*, and advanced animations via Core Graphics/Animation.
-  - Achieved stable multi-device pairing and real-time data sync using **Core Bluetooth** and **MFi** protocols.
 - **Noodoe EV & White-label Ecosystem:**
-  - Architected the **Noodoe Core SDK**, enabling the rapid delivery of **10+ white-label apps** while **reducing duplicate code by 95%**.
-  - Developed a dynamic theming and localization engine for **20+ languages**.
+  - Architected the **Noodoe Core SDK**, featuring a **Dynamic Configuration & Theming system** that allows real-time feature toggle management across 10+ white-label apps.
+  - Built a localization infrastructure supporting 20+ languages to ensure seamless global deployment.
   - Implemented a hybrid **GraphQL + WebSocket** client to handle real-time charging status, solving critical memory leak issues.
-  - Integrated full-loop payment and verification systems: **Stripe, Apple Pay**, and Driver License OCR/verification.
+  - Integrated **Stripe, Apple Pay**, and **3rd-party login** (Apple, Google, Facebook).
 - **Fubon Noodoe Car:**
-  - Independently managed the iOS lifecycle and integrated the **DrivingBehavior SDK (KMP)** for event detection (hard braking/cornering) and trip visualization.
+  - Independently managed the iOS lifecycle, integrating a **low-energy BLE auto-wake** mechanism to ensure driving data collection starts automatically in the background.  
+  - Integrated the **DrivingBehavior SDK (KMP)** for real-time detection of high-risk events, such as hard braking and rapid acceleration.
+  - Developed features for **driving path rendering** and **parking location logging** leveraging BLE signal strength and GPS data.
+  - Collaborated with firmware engineers to optimize data synchronization between the dedicated sensor and the iOS app, ensuring data reliability for insurance assessment.
 - **Infrastructure & DevOps:**
-  - Developed internal frameworks: `NDNetwork` (Certificate Pinning), `NDLogger`, and `NDSecureStore`.
+  - Developed internal frameworks: `NDNetwork`, `NDLogger`, and `NDSecureStore`.
   - Maintained **Jenkins CI/CD** with *jenkins-job-builder* for automated building and multi-environment deployment of white-label products.
 
 ### **Unistar (FinTech / Lottery Platform)**
@@ -77,5 +79,4 @@
 
 ## PREFERENCES
 - **Role:** Full-time Principal / Senior iOS Engineer
-- **Expected Annual Salary:** TWD 1.5M – 2.0M
 - **Location:** Taipei / Remote Friendly
