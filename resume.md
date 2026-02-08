@@ -1,4 +1,4 @@
-- [resume-c.md](docs/resume-c.md)
-- [resume-cl.md](docs/resume-cl.md)
-- [resume-e.md](docs/resume-e.md)
-- [resume-el.md](docs/resume-el.md)
+- [resume-c.md](./resume-c.md)
+- [resume-cl.md](./resume-cl.md)
+- [resume-e.md](./resume-e.md)
+- [resume-el.md](./resume-el.md)
