@@ -44,7 +44,7 @@
   - Developed internal frameworks: `NDNetwork` (Certificate Pinning), `NDLogger`, and `NDSecureStore`.
   - Maintained **Jenkins CI/CD** with *jenkins-job-builder* for automated building and multi-environment deployment of white-label products.
 
-### **Unistar (High-Transaction iGaming Platform)**
+### **Unistar (FinTech / Lottery Platform)**
 **Full-stack Engineer / Java Specialist** | *Oct 2014 – Apr 2018*
 
 - **Full-Stack Implementation:** Led the development of native mobile applications:
