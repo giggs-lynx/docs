@@ -1,3 +1,3 @@
 # docs
 
-[resume](resume.md)
+[resume](http://giggs-lynx.github.io/docs/resume)
