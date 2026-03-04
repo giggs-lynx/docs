@@ -59,4 +59,4 @@ I expect compensation that is in line with market standards and fairly reflects 
 
 ## 如果對方希望提供薪資範圍 / If asked for a salary range
 根據我的經驗與市場行情，我希望年薪在 150萬至 200萬新台幣之間。  
-Based on my experience and market standards, I’m looking for an annual salary in the range of NT$1,500,000 to 2,000,000.
+Based on my experience and market standards, I’m looking for an annual salary in the range of NT$1.5M to 2M.
