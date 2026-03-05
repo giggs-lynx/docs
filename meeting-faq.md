@@ -58,5 +58,35 @@ I expect compensation that is in line with market standards and fairly reflects 
 ---
 
 ## 如果對方希望提供薪資範圍 / If asked for a salary range
-根據我的經驗與市場行情，我希望年薪在 150萬至 200萬新台幣之間。  
-Based on my experience and market standards, I’m looking for an annual salary in the range of NT$1.5M to 2M.
+根據我的經驗與市場行情，我希望年薪在 180萬至 200萬新台幣之間。  
+Based on my experience and market standards, I’m looking for an annual salary in the range of NT$1.8M to 2M.
+
+---
+
+## What was your previous salary?
+我之前的 base salary 大約是月薪 9.1 萬，保證 14 個月，所以 base 年薪大概是 127 萬左右。另外薪酬裡也包含認股權，但公司目前還沒有上市。
+My base salary was about NT$91,000 per month with a guaranteed 14 months, so the base annual compensation was roughly around NT$1.27M.
+I also had stock options as part of the package, although the company hasn’t gone public yet.
+
+---
+
+## What do you know about Stripe / BBPOS / Stripe Terminal?
+我看了 BBPOS 招募頁面和 Stripe Terminal 介紹，印象最深的是 BBPOS 從 2008 年發明第一款 audio-jack 讀卡器，是 mPOS 先驅，2022 年被 Stripe 收購後融入 Terminal 團隊。Stripe Terminal 讓線上線下支付統一，iOS SDK 讓開發者輕鬆整合 NFC、EMV、Apple Pay 等硬體（如 WisePOS E）。這跟我過去在 Noodoe 建 modular SDK 和 Core Bluetooth 硬體整合的經驗很契合，我很期待貢獻其中。
+I checked the BBPOS Canva page and Stripe Terminal site. What impressed me most is BBPOS's history as an mPOS pioneer since 2008—they invented the first audio-jack card reader—and how the 2022 acquisition integrated them into Stripe Terminal. Stripe Terminal unifies online and in-person payments on one platform, with the iOS SDK making hardware integration (NFC, EMV, Apple Pay, devices like WisePOS E) seamless for custom POS apps. This matches my experience building modular SDKs and Core Bluetooth integrations for white-label apps at Noodoe—I'm really excited to contribute to that scale.
+
+---
+
+## What do you know about BBPOS and Stripe Terminal?
+From what I understand, BBPOS is a payment hardware company that was acquired by Stripe and is now part of the Stripe Terminal organization.
+Stripe Terminal allows businesses to accept in-person payments using developer-friendly APIs and SDKs.
+
+It combines payment readers, cloud APIs, and mobile SDKs so developers can integrate card-present payments directly into their apps.
+
+What I find particularly interesting is that it connects hardware devices with developer tools, which is quite similar to the type of SDK and hardware integration work I’ve done before.
+
+---
+
+## 要問的問題
+Could you share how the iOS SDK team is currently structured, and what are the team's main priorities in the near term?
+And what are the longer-term goals for the team or the SDK platform?
+Also, I’m curious how the compensation package is typically structured for this role.
