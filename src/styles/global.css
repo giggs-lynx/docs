@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+  --color-base: #060a10;
+  --color-panel: #0c121c;
+  --color-edge: #1b2433;
+  --color-accent: #2dd6e8;
+  --color-accent-dim: #1a8a99;
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "PingFang TC", "Noto Sans TC", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-base);
+  color: #c4cdd9;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* subtle blueprint grid over the whole page */
+.bg-grid {
+  background-image:
+    linear-gradient(rgba(45, 214, 232, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(45, 214, 232, 0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: linear-gradient(to bottom, black 0%, black 60%, transparent 100%);
+}
+
+/* hero glow */
+.glow {
+  background: radial-gradient(
+    ellipse 60% 50% at 50% -10%,
+    rgba(45, 214, 232, 0.14),
+    transparent 70%
+  );
+}
+
+::selection {
+  background: rgba(45, 214, 232, 0.3);
+  color: #ffffff;
+}

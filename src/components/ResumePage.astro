@@ -1,0 +1,249 @@
+---
+import Base from '../layouts/Base.astro';
+import { resume, type Lang } from '../data/resume';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const r = resume[lang];
+const htmlLang = lang === 'zh' ? 'zh-Hant' : 'en';
+const description =
+  lang === 'zh'
+    ? '蔡勝文 (Giggs Tsai) — Principal iOS Engineer，專精車聯網、EV 充電與智慧移動。'
+    : 'Sheng-Wen (Giggs) Tsai — Principal iOS Engineer specialising in Connected Vehicles, EV charging, and smart mobility.';
+
+const sectionNumbers = ['01', '02', '03', '04', '05'];
+---
+
+<Base lang={htmlLang} title={`${r.name} · ${r.title}`} description={description}>
+  <div class="glow pointer-events-none fixed inset-0 z-0"></div>
+  <div class="bg-grid pointer-events-none fixed inset-0 z-0"></div>
+
+  <div class="relative z-10 mx-auto max-w-4xl px-5 sm:px-8">
+    <!-- nav -->
+    <header class="flex items-center justify-between py-6">
+      <a href="#top" class="font-mono text-sm font-semibold tracking-widest text-accent">
+        GT<span class="text-white/40">_</span>
+      </a>
+      <nav class="hidden items-center gap-6 font-mono text-xs tracking-wider text-white/60 sm:flex">
+        <a href="#experience" class="transition hover:text-accent">{r.ui.nav.experience}</a>
+        <a href="#skills" class="transition hover:text-accent">{r.ui.nav.skills}</a>
+        <a href="#projects" class="transition hover:text-accent">{r.ui.nav.projects}</a>
+        <a href="#contact" class="transition hover:text-accent">{r.ui.nav.contact}</a>
+      </nav>
+      <div class="font-mono text-xs tracking-wider">
+        <a
+          href="/"
+          class={lang === 'en' ? 'text-accent' : 'text-white/40 transition hover:text-white'}>EN</a
+        >
+        <span class="text-white/20">/</span>
+        <a
+          href="/zh/"
+          class={lang === 'zh' ? 'text-accent' : 'text-white/40 transition hover:text-white'}>中文</a
+        >
+      </div>
+    </header>
+
+    <!-- hero -->
+    <section id="top" class="pt-16 pb-12 sm:pt-24">
+      <p class="font-mono text-xs font-medium tracking-[0.3em] text-accent uppercase">
+        {r.title}
+      </p>
+      <h1 class="mt-4 text-4xl font-extrabold tracking-tight text-white sm:text-6xl">
+        {r.name}
+      </h1>
+      <p class="mt-3 font-mono text-sm text-white/50">{r.location}</p>
+      <p class="mt-6 max-w-2xl text-base leading-relaxed text-white/70 sm:text-lg">
+        {r.summary}
+      </p>
+
+      <!-- stats -->
+      <dl class="mt-12 grid grid-cols-2 gap-px overflow-hidden rounded-xl border border-edge bg-edge sm:grid-cols-4">
+        {
+          r.stats.map((s) => (
+            <div class="bg-panel px-5 py-5">
+              <dt class="order-last mt-1 text-xs text-white/50">{s.label}</dt>
+              <dd class="font-mono text-3xl font-semibold text-accent">{s.value}</dd>
+            </div>
+          ))
+        }
+      </dl>
+    </section>
+
+    <!-- experience -->
+    <section id="experience" class="py-12">
+      <h2 class="flex items-baseline gap-3 font-mono text-sm font-semibold tracking-[0.25em] text-white">
+        <span class="text-accent">{sectionNumbers[0]} /</span>
+        {r.ui.sections.experience}
+      </h2>
+
+      <div class="mt-8 space-y-12">
+        {
+          r.experience.map((job) => (
+            <article class="relative border-l border-edge pl-6 sm:pl-8">
+              <span class="absolute top-1.5 -left-[5px] h-2.5 w-2.5 rounded-full bg-accent shadow-[0_0_12px_rgba(45,214,232,0.8)]" />
+              <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                <h3 class="text-xl font-bold text-white">{job.company}</h3>
+                <p class="font-mono text-xs text-white/40">{job.period}</p>
+              </div>
+              <p class="mt-1 text-sm font-medium text-accent">
+                {job.role}
+                <span class="text-white/40"> · {job.domain}</span>
+              </p>
+              {job.intro && <p class="mt-3 text-sm leading-relaxed text-white/65">{job.intro}</p>}
+
+              {job.projects && (
+                <div class="mt-5 space-y-5">
+                  {job.projects.map((p) => (
+                    <div class="rounded-lg border border-edge bg-panel/60 p-4 sm:p-5">
+                      <div class="flex flex-wrap items-baseline justify-between gap-2">
+                        <h4 class="text-sm font-semibold text-white">{p.name}</h4>
+                        {p.link && (
+                          <a
+                            href={p.link.url}
+                            target="_blank"
+                            rel="noopener"
+                            class="font-mono text-xs text-accent transition hover:underline"
+                          >
+                            {p.link.label} ↗
+                          </a>
+                        )}
+                      </div>
+                      <ul class="mt-3 space-y-2">
+                        {p.points.map((pt) => (
+                          <li class="flex gap-2.5 text-sm leading-relaxed text-white/65">
+                            <span class="mt-[3px] shrink-0 font-mono text-xs text-accent-dim">▸</span>
+                            <span>{pt}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              {job.points && (
+                <ul class="mt-4 space-y-2">
+                  {job.points.map((pt) => (
+                    <li class="flex gap-2.5 text-sm leading-relaxed text-white/65">
+                      <span class="mt-[3px] shrink-0 font-mono text-xs text-accent-dim">▸</span>
+                      <span>{pt}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
+
+              <div class="mt-4 flex flex-wrap gap-1.5">
+                {job.tags.map((t) => (
+                  <span class="rounded border border-edge bg-panel px-2 py-0.5 font-mono text-[11px] text-white/50">
+                    {t}
+                  </span>
+                ))}
+              </div>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+
+    <!-- skills -->
+    <section id="skills" class="py-12">
+      <h2 class="flex items-baseline gap-3 font-mono text-sm font-semibold tracking-[0.25em] text-white">
+        <span class="text-accent">{sectionNumbers[1]} /</span>
+        {r.ui.sections.skills}
+      </h2>
+      <div class="mt-8 grid gap-4 sm:grid-cols-2">
+        {
+          r.skills.map((group) => (
+            <div class="rounded-lg border border-edge bg-panel/60 p-5">
+              <h3 class="font-mono text-xs font-semibold tracking-wider text-accent uppercase">
+                {group.category}
+              </h3>
+              <div class="mt-3 flex flex-wrap gap-1.5">
+                {group.items.map((item) => (
+                  <span class="rounded border border-edge bg-base px-2.5 py-1 text-xs text-white/70">
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <!-- projects -->
+    <section id="projects" class="py-12">
+      <h2 class="flex items-baseline gap-3 font-mono text-sm font-semibold tracking-[0.25em] text-white">
+        <span class="text-accent">{sectionNumbers[2]} /</span>
+        {r.ui.sections.projects}
+      </h2>
+      <div class="mt-8 grid gap-4 sm:grid-cols-3">
+        {
+          r.highlights.map((p) => (
+            <a
+              href={p.link}
+              target="_blank"
+              rel="noopener"
+              class="group rounded-lg border border-edge bg-panel/60 p-5 transition hover:border-accent-dim hover:bg-panel"
+            >
+              <h3 class="text-sm font-semibold text-white transition group-hover:text-accent">
+                {p.name}
+              </h3>
+              <p class="mt-2 text-xs leading-relaxed text-white/55">{p.desc}</p>
+              <p class="mt-4 font-mono text-xs text-accent">{p.linkLabel} ↗</p>
+            </a>
+          ))
+        }
+      </div>
+    </section>
+
+    <!-- education -->
+    <section class="py-12">
+      <h2 class="flex items-baseline gap-3 font-mono text-sm font-semibold tracking-[0.25em] text-white">
+        <span class="text-accent">{sectionNumbers[3]} /</span>
+        {r.ui.sections.education}
+      </h2>
+      <div class="mt-6">
+        {
+          r.education.map((e) => (
+            <div class="flex flex-wrap items-baseline justify-between gap-2">
+              <p class="text-sm text-white/80">
+                <span class="font-semibold text-white">{e.school}</span>
+                <span class="text-white/50"> — {e.degree}</span>
+              </p>
+              <p class="font-mono text-xs text-white/40">{e.period}</p>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <!-- contact -->
+    <section id="contact" class="py-16">
+      <div class="rounded-xl border border-edge bg-panel/60 p-8 text-center sm:p-12">
+        <p class="font-mono text-xs tracking-[0.3em] text-accent uppercase">
+          {sectionNumbers[4]} / {r.ui.sections.contact}
+        </p>
+        <h2 class="mt-4 text-2xl font-bold text-white sm:text-3xl">{r.ui.contactCta}</h2>
+        <p class="mt-2 text-sm text-white/50">{r.ui.openTo}</p>
+        <div class="mt-8 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 font-mono text-sm">
+          <a href={`mailto:${r.contact.email}`} class="text-white/70 transition hover:text-accent">
+            {r.contact.email}
+          </a>
+          <a href={`tel:${r.contact.phone.replace(/[^+\d]/g, '')}`} class="text-white/70 transition hover:text-accent">
+            {r.contact.phone}
+          </a>
+          <a href={r.contact.github} target="_blank" rel="noopener" class="text-white/70 transition hover:text-accent">
+            GitHub ↗
+          </a>
+        </div>
+      </div>
+      <p class="py-10 text-center font-mono text-xs text-white/30">
+        © 2026 Giggs Tsai · Built with Astro
+      </p>
+    </section>
+  </div>
+</Base>
