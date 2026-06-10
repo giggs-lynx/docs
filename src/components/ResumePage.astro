@@ -14,107 +14,146 @@ const description =
     ? '蔡勝文 (Giggs Tsai) — Principal iOS Engineer，專精車聯網、EV 充電與智慧移動。'
     : 'Sheng-Wen (Giggs) Tsai — Principal iOS Engineer specialising in Connected Vehicles, EV charging, and smart mobility.';
 
-const sectionNumbers = ['01', '02', '03', '04', '05'];
+// telemetry-style module codes, kept in English on both locales
+const modules = {
+  experience: { no: '01', code: 'EXPERIENCE.LOG' },
+  skills: { no: '02', code: 'SKILLS.SYS' },
+  projects: { no: '03', code: 'PROJECTS.DIR' },
+  education: { no: '04', code: 'EDU.REC' },
+  contact: { no: '05', code: 'CONTACT.INIT' },
+};
 ---
 
 <Base lang={htmlLang} title={`${r.name} · ${r.title}`} description={description}>
+  <!-- atmosphere -->
   <div class="glow pointer-events-none fixed inset-0 z-0"></div>
-  <div class="bg-grid pointer-events-none fixed inset-0 z-0"></div>
+  <div class="dotgrid pointer-events-none fixed inset-0 z-0"></div>
+  <div class="scanlines pointer-events-none fixed inset-0 z-40"></div>
+  <div class="noise pointer-events-none fixed inset-0 z-40"></div>
 
-  <div class="relative z-10 mx-auto max-w-4xl px-5 sm:px-8">
-    <!-- nav -->
-    <header class="flex items-center justify-between py-6">
-      <a href="#top" class="font-mono text-sm font-semibold tracking-widest text-accent">
-        GT<span class="text-white/40">_</span>
+  <!-- telemetry status bar -->
+  <div class="relative z-30 border-b border-edge">
+    <div
+      class="mx-auto flex max-w-5xl items-center justify-between px-5 py-2 font-mono text-xs tracking-[0.2em] text-muted uppercase sm:px-8"
+    >
+      <span>GT.SYS <span class="text-volt-dim">//</span> RESUME_v3</span>
+      <span class="hidden items-center gap-5 sm:flex">
+        <span class="flex items-center gap-1.5">
+          <span class="pulse inline-block h-1.5 w-1.5 rounded-full bg-volt"></span>
+          <span class="text-volt">online</span>
+        </span>
+        <span>ble:connected</span>
+        <span>25.03°N 121.56°E</span>
+      </span>
+      <span>
+        <a href="/" class={lang === 'en' ? 'text-volt' : 'transition hover:text-ink'}>[EN]</a>
+        <a href="/zh/" class={lang === 'zh' ? 'text-volt' : 'transition hover:text-ink'}>[中文]</a>
+      </span>
+    </div>
+  </div>
+
+  <!-- nav -->
+  <header class="sticky top-0 z-30 border-b border-edge bg-base/85 backdrop-blur">
+    <div class="mx-auto flex max-w-5xl items-center justify-between px-5 py-3 sm:px-8">
+      <a href="#top" class="font-display text-base font-bold tracking-widest text-ink">
+        GT<span class="text-volt">_</span>
       </a>
-      <nav class="hidden items-center gap-6 font-mono text-xs tracking-wider text-white/60 sm:flex">
-        <a href="#experience" class="transition hover:text-accent">{r.ui.nav.experience}</a>
-        <a href="#skills" class="transition hover:text-accent">{r.ui.nav.skills}</a>
-        <a href="#projects" class="transition hover:text-accent">{r.ui.nav.projects}</a>
-        <a href="#contact" class="transition hover:text-accent">{r.ui.nav.contact}</a>
+      <nav class="flex items-center gap-5 font-mono text-sm tracking-[0.15em] text-muted uppercase sm:gap-7">
+        <a href="#experience" class="transition hover:text-volt">{r.ui.nav.experience}</a>
+        <a href="#skills" class="transition hover:text-volt">{r.ui.nav.skills}</a>
+        <a href="#projects" class="hidden transition hover:text-volt sm:block">{r.ui.nav.projects}</a>
+        <a href="#contact" class="transition hover:text-volt">{r.ui.nav.contact}</a>
       </nav>
-      <div class="font-mono text-xs tracking-wider">
-        <a
-          href="/"
-          class={lang === 'en' ? 'text-accent' : 'text-white/40 transition hover:text-white'}>EN</a
-        >
-        <span class="text-white/20">/</span>
-        <a
-          href="/zh/"
-          class={lang === 'zh' ? 'text-accent' : 'text-white/40 transition hover:text-white'}>中文</a
-        >
-      </div>
-    </header>
+    </div>
+  </header>
 
+  <main id="top" class="relative z-10 mx-auto max-w-5xl px-5 sm:px-8">
     <!-- hero -->
-    <section id="top" class="pt-16 pb-12 sm:pt-24">
-      <p class="font-mono text-xs font-medium tracking-[0.3em] text-accent uppercase">
-        {r.title}
+    <section class="relative pt-20 pb-14 sm:pt-28 sm:pb-20">
+      <span
+        aria-hidden="true"
+        class="ghost pointer-events-none absolute -top-2 right-0 hidden font-display text-[11rem] leading-none font-bold select-none lg:block"
+      >
+        11Y
+      </span>
+
+      <p class="reveal font-mono text-sm tracking-[0.3em] text-volt uppercase" style="animation-delay: 0ms">
+        &gt; {r.title.replaceAll(' ', '_')}<span class="cursor">▌</span>
       </p>
-      <h1 class="mt-4 text-4xl font-extrabold tracking-tight text-white sm:text-6xl">
+      <h1
+        class="reveal mt-5 max-w-3xl font-display text-4xl leading-[1.05] font-bold tracking-tight text-white uppercase sm:text-6xl"
+        style="animation-delay: 90ms"
+      >
         {r.name}
       </h1>
-      <p class="mt-3 font-mono text-sm text-white/50">{r.location}</p>
-      <p class="mt-6 max-w-2xl text-base leading-relaxed text-white/70 sm:text-lg">
+      <p class="reveal mt-4 font-mono text-sm tracking-[0.15em] text-muted uppercase" style="animation-delay: 180ms">
+        {r.location}
+      </p>
+      <p class="reveal mt-7 max-w-2xl text-base leading-relaxed text-ink/85 sm:text-lg" style="animation-delay: 270ms">
         {r.summary}
       </p>
 
-      <!-- stats -->
-      <dl class="mt-12 grid grid-cols-2 gap-px overflow-hidden rounded-xl border border-edge bg-edge sm:grid-cols-4">
-        {
-          r.stats.map((s) => (
-            <div class="bg-panel px-5 py-5">
-              <dt class="order-last mt-1 text-xs text-white/50">{s.label}</dt>
-              <dd class="font-mono text-3xl font-semibold text-accent">{s.value}</dd>
-            </div>
-          ))
-        }
-      </dl>
+      <!-- instrument readouts -->
+      <div class="reveal mt-14" style="animation-delay: 380ms">
+        <div class="ticks h-1.5 w-full"></div>
+        <dl class="grid grid-cols-2 border border-edge bg-panel/60 sm:grid-cols-4">
+          {
+            r.stats.map((s, i) => (
+              <div class={`px-5 py-5 ${i > 0 ? 'border-l border-edge max-sm:[&:nth-child(3)]:border-l-0' : ''} ${i >= 2 ? 'max-sm:border-t max-sm:border-edge' : ''}`}>
+                <dd class="font-display text-3xl font-bold text-volt sm:text-4xl">{s.value}</dd>
+                <dt class="mt-1 font-mono text-xs tracking-[0.15em] text-muted uppercase">{s.label}</dt>
+              </div>
+            ))
+          }
+        </dl>
+      </div>
     </section>
 
     <!-- experience -->
-    <section id="experience" class="py-12">
-      <h2 class="flex items-baseline gap-3 font-mono text-sm font-semibold tracking-[0.25em] text-white">
-        <span class="text-accent">{sectionNumbers[0]} /</span>
-        {r.ui.sections.experience}
-      </h2>
+    <section id="experience" class="relative scroll-mt-20 py-14">
+      <span aria-hidden="true" class="ghost pointer-events-none absolute top-4 right-0 font-display text-8xl font-bold select-none">
+        {modules.experience.no}
+      </span>
+      <p class="font-mono text-sm tracking-[0.25em] text-volt uppercase">
+        [{modules.experience.no}] <span class="text-muted">// {modules.experience.code}</span>
+      </p>
+      <h2 class="mt-2 font-display text-3xl font-bold text-white uppercase">{r.ui.sections.experience}</h2>
 
-      <div class="mt-8 space-y-12">
+      <div class="mt-10 space-y-14">
         {
           r.experience.map((job) => (
-            <article class="relative border-l border-edge pl-6 sm:pl-8">
-              <span class="absolute top-1.5 -left-[5px] h-2.5 w-2.5 rounded-full bg-accent shadow-[0_0_12px_rgba(45,214,232,0.8)]" />
+            <article class="relative border-l border-edge pl-6 sm:pl-9">
+              <span class="absolute top-2 -left-[4.5px] h-2 w-2 rotate-45 bg-volt shadow-[0_0_14px_rgba(198,244,50,0.9)]" />
               <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
-                <h3 class="text-xl font-bold text-white">{job.company}</h3>
-                <p class="font-mono text-xs text-white/40">{job.period}</p>
+                <h3 class="font-display text-xl font-bold tracking-wide text-white uppercase">{job.company}</h3>
+                <p class="font-mono text-sm tracking-[0.15em] text-signal">{job.period}</p>
               </div>
-              <p class="mt-1 text-sm font-medium text-accent">
-                {job.role}
-                <span class="text-white/40"> · {job.domain}</span>
+              <p class="mt-1.5 font-mono text-sm tracking-wide text-volt">
+                {job.role} <span class="text-muted">· {job.domain}</span>
               </p>
-              {job.intro && <p class="mt-3 text-sm leading-relaxed text-white/65">{job.intro}</p>}
+              {job.intro && <p class="mt-4 max-w-2xl text-base leading-relaxed text-ink/80">{job.intro}</p>}
 
               {job.projects && (
-                <div class="mt-5 space-y-5">
+                <div class="mt-6 space-y-5">
                   {job.projects.map((p) => (
-                    <div class="rounded-lg border border-edge bg-panel/60 p-4 sm:p-5">
+                    <div class="corner-frame bg-panel/50 p-5 sm:p-6">
                       <div class="flex flex-wrap items-baseline justify-between gap-2">
-                        <h4 class="text-sm font-semibold text-white">{p.name}</h4>
+                        <h4 class="font-display text-base font-semibold tracking-wide text-white">{p.name}</h4>
                         {p.link && (
                           <a
                             href={p.link.url}
                             target="_blank"
                             rel="noopener"
-                            class="font-mono text-xs text-accent transition hover:underline"
+                            class="font-mono text-sm tracking-wider text-volt uppercase transition hover:text-white"
                           >
                             {p.link.label} ↗
                           </a>
                         )}
                       </div>
-                      <ul class="mt-3 space-y-2">
+                      <ul class="mt-4 space-y-2.5">
                         {p.points.map((pt) => (
-                          <li class="flex gap-2.5 text-sm leading-relaxed text-white/65">
-                            <span class="mt-[3px] shrink-0 font-mono text-xs text-accent-dim">▸</span>
+                          <li class="flex gap-3 text-base leading-relaxed text-ink/80">
+                            <span class="mt-px shrink-0 font-mono text-xs text-volt-dim">▸</span>
                             <span>{pt}</span>
                           </li>
                         ))}
@@ -125,21 +164,19 @@ const sectionNumbers = ['01', '02', '03', '04', '05'];
               )}
 
               {job.points && (
-                <ul class="mt-4 space-y-2">
+                <ul class="mt-5 max-w-3xl space-y-2.5">
                   {job.points.map((pt) => (
-                    <li class="flex gap-2.5 text-sm leading-relaxed text-white/65">
-                      <span class="mt-[3px] shrink-0 font-mono text-xs text-accent-dim">▸</span>
+                    <li class="flex gap-3 text-base leading-relaxed text-ink/80">
+                      <span class="mt-px shrink-0 font-mono text-xs text-volt-dim">▸</span>
                       <span>{pt}</span>
                     </li>
                   ))}
                 </ul>
               )}
 
-              <div class="mt-4 flex flex-wrap gap-1.5">
+              <div class="mt-5 flex flex-wrap gap-x-3 gap-y-1.5 font-mono text-xs tracking-wider text-muted uppercase">
                 {job.tags.map((t) => (
-                  <span class="rounded border border-edge bg-panel px-2 py-0.5 font-mono text-[11px] text-white/50">
-                    {t}
-                  </span>
+                  <span class="transition hover:text-volt">[{t}]</span>
                 ))}
               </div>
             </article>
@@ -149,21 +186,23 @@ const sectionNumbers = ['01', '02', '03', '04', '05'];
     </section>
 
     <!-- skills -->
-    <section id="skills" class="py-12">
-      <h2 class="flex items-baseline gap-3 font-mono text-sm font-semibold tracking-[0.25em] text-white">
-        <span class="text-accent">{sectionNumbers[1]} /</span>
-        {r.ui.sections.skills}
-      </h2>
-      <div class="mt-8 grid gap-4 sm:grid-cols-2">
+    <section id="skills" class="relative scroll-mt-20 py-14">
+      <span aria-hidden="true" class="ghost pointer-events-none absolute top-4 right-0 font-display text-8xl font-bold select-none">
+        {modules.skills.no}
+      </span>
+      <p class="font-mono text-sm tracking-[0.25em] text-volt uppercase">
+        [{modules.skills.no}] <span class="text-muted">// {modules.skills.code}</span>
+      </p>
+      <h2 class="mt-2 font-display text-3xl font-bold text-white uppercase">{r.ui.sections.skills}</h2>
+
+      <div class="mt-10 grid gap-4 sm:grid-cols-2">
         {
           r.skills.map((group) => (
-            <div class="rounded-lg border border-edge bg-panel/60 p-5">
-              <h3 class="font-mono text-xs font-semibold tracking-wider text-accent uppercase">
-                {group.category}
-              </h3>
-              <div class="mt-3 flex flex-wrap gap-1.5">
+            <div class="corner-frame bg-panel/50 p-5 sm:p-6">
+              <h3 class="font-mono text-sm font-medium tracking-[0.2em] text-volt uppercase">{group.category}</h3>
+              <div class="mt-4 flex flex-wrap gap-2">
                 {group.items.map((item) => (
-                  <span class="rounded border border-edge bg-base px-2.5 py-1 text-xs text-white/70">
+                  <span class="border border-edge bg-base px-2.5 py-1 text-sm text-ink/80 transition hover:border-volt-dim">
                     {item}
                   </span>
                 ))}
@@ -175,25 +214,30 @@ const sectionNumbers = ['01', '02', '03', '04', '05'];
     </section>
 
     <!-- projects -->
-    <section id="projects" class="py-12">
-      <h2 class="flex items-baseline gap-3 font-mono text-sm font-semibold tracking-[0.25em] text-white">
-        <span class="text-accent">{sectionNumbers[2]} /</span>
-        {r.ui.sections.projects}
-      </h2>
-      <div class="mt-8 grid gap-4 sm:grid-cols-3">
+    <section id="projects" class="relative scroll-mt-20 py-14">
+      <span aria-hidden="true" class="ghost pointer-events-none absolute top-4 right-0 font-display text-8xl font-bold select-none">
+        {modules.projects.no}
+      </span>
+      <p class="font-mono text-sm tracking-[0.25em] text-volt uppercase">
+        [{modules.projects.no}] <span class="text-muted">// {modules.projects.code}</span>
+      </p>
+      <h2 class="mt-2 font-display text-3xl font-bold text-white uppercase">{r.ui.sections.projects}</h2>
+
+      <div class="mt-10 grid gap-4 sm:grid-cols-3">
         {
-          r.highlights.map((p) => (
+          r.highlights.map((p, i) => (
             <a
               href={p.link}
               target="_blank"
               rel="noopener"
-              class="group rounded-lg border border-edge bg-panel/60 p-5 transition hover:border-accent-dim hover:bg-panel"
+              class="group corner-frame relative bg-panel/50 p-6 transition duration-200 hover:-translate-y-1 hover:bg-panel"
             >
-              <h3 class="text-sm font-semibold text-white transition group-hover:text-accent">
+              <span class="ghost font-display text-4xl font-bold">0{i + 1}</span>
+              <h3 class="mt-4 font-display text-base font-semibold tracking-wide text-white transition group-hover:text-volt">
                 {p.name}
               </h3>
-              <p class="mt-2 text-xs leading-relaxed text-white/55">{p.desc}</p>
-              <p class="mt-4 font-mono text-xs text-accent">{p.linkLabel} ↗</p>
+              <p class="mt-2 text-sm leading-relaxed text-ink/70">{p.desc}</p>
+              <p class="mt-5 font-mono text-sm tracking-wider text-volt uppercase">{p.linkLabel} ↗</p>
             </a>
           ))
         }
@@ -201,20 +245,20 @@ const sectionNumbers = ['01', '02', '03', '04', '05'];
     </section>
 
     <!-- education -->
-    <section class="py-12">
-      <h2 class="flex items-baseline gap-3 font-mono text-sm font-semibold tracking-[0.25em] text-white">
-        <span class="text-accent">{sectionNumbers[3]} /</span>
-        {r.ui.sections.education}
-      </h2>
-      <div class="mt-6">
+    <section class="relative py-14">
+      <p class="font-mono text-sm tracking-[0.25em] text-volt uppercase">
+        [{modules.education.no}] <span class="text-muted">// {modules.education.code}</span>
+      </p>
+      <h2 class="mt-2 font-display text-3xl font-bold text-white uppercase">{r.ui.sections.education}</h2>
+      <div class="mt-7 space-y-3">
         {
           r.education.map((e) => (
-            <div class="flex flex-wrap items-baseline justify-between gap-2">
-              <p class="text-sm text-white/80">
-                <span class="font-semibold text-white">{e.school}</span>
-                <span class="text-white/50"> — {e.degree}</span>
+            <div class="flex flex-wrap items-baseline justify-between gap-2 border-l border-edge pl-6 sm:pl-9">
+              <p class="text-base text-ink/85">
+                <span class="font-display font-semibold text-white">{e.school}</span>
+                <span class="text-muted"> — {e.degree}</span>
               </p>
-              <p class="font-mono text-xs text-white/40">{e.period}</p>
+              <p class="font-mono text-sm tracking-[0.15em] text-signal">{e.period}</p>
             </div>
           ))
         }
@@ -222,28 +266,41 @@ const sectionNumbers = ['01', '02', '03', '04', '05'];
     </section>
 
     <!-- contact -->
-    <section id="contact" class="py-16">
-      <div class="rounded-xl border border-edge bg-panel/60 p-8 text-center sm:p-12">
-        <p class="font-mono text-xs tracking-[0.3em] text-accent uppercase">
-          {sectionNumbers[4]} / {r.ui.sections.contact}
+    <section id="contact" class="scroll-mt-20 py-16">
+      <div class="corner-frame bg-panel/50 px-6 py-12 text-center sm:px-12 sm:py-16">
+        <p class="font-mono text-sm tracking-[0.3em] text-volt uppercase">
+          [{modules.contact.no}] // {modules.contact.code}
         </p>
-        <h2 class="mt-4 text-2xl font-bold text-white sm:text-3xl">{r.ui.contactCta}</h2>
-        <p class="mt-2 text-sm text-white/50">{r.ui.openTo}</p>
-        <div class="mt-8 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 font-mono text-sm">
-          <a href={`mailto:${r.contact.email}`} class="text-white/70 transition hover:text-accent">
+        <h2 class="mt-5 font-display text-2xl font-bold text-white uppercase sm:text-3xl">
+          {r.ui.contactCta}
+        </h2>
+        <p class="mt-3 font-mono text-sm tracking-wide text-muted">{r.ui.openTo}</p>
+        <div class="mt-9 flex flex-wrap items-center justify-center gap-4">
+          <a
+            href={`mailto:${r.contact.email}`}
+            class="bg-volt px-6 py-3 font-mono text-sm font-medium tracking-[0.15em] text-[#08090b] uppercase transition hover:shadow-[0_0_24px_rgba(198,244,50,0.45)]"
+          >
             {r.contact.email}
           </a>
-          <a href={`tel:${r.contact.phone.replace(/[^+\d]/g, '')}`} class="text-white/70 transition hover:text-accent">
+          <a
+            href={`tel:${r.contact.phone.replace(/[^+\d]/g, '')}`}
+            class="border border-edge px-6 py-3 font-mono text-sm tracking-[0.15em] text-ink/80 transition hover:border-volt hover:text-volt"
+          >
             {r.contact.phone}
           </a>
-          <a href={r.contact.github} target="_blank" rel="noopener" class="text-white/70 transition hover:text-accent">
+          <a
+            href={r.contact.github}
+            target="_blank"
+            rel="noopener"
+            class="border border-edge px-6 py-3 font-mono text-sm tracking-[0.15em] text-ink/80 uppercase transition hover:border-volt hover:text-volt"
+          >
             GitHub ↗
           </a>
         </div>
       </div>
-      <p class="py-10 text-center font-mono text-xs text-white/30">
-        © 2026 Giggs Tsai · Built with Astro
+      <p class="py-10 text-center font-mono text-xs tracking-[0.2em] text-muted/60 uppercase">
+        © 2026 Giggs Tsai · sys.shutdown_
       </p>
     </section>
-  </div>
+  </main>
 </Base>

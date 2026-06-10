@@ -1,13 +1,17 @@
 @import "tailwindcss";
 
 @theme {
-  --color-base: #060a10;
-  --color-panel: #0c121c;
-  --color-edge: #1b2433;
-  --color-accent: #2dd6e8;
-  --color-accent-dim: #1a8a99;
-  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "PingFang TC", "Noto Sans TC", sans-serif;
-  --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --color-base: #08090b;
+  --color-panel: #0e1014;
+  --color-edge: #20242b;
+  --color-ink: #c8d0d9;
+  --color-muted: #7e8893;
+  --color-volt: #c6f432;
+  --color-volt-dim: #8aaa28;
+  --color-signal: #ff9e3d;
+  --font-display: "Chakra Petch", "Noto Sans TC", sans-serif;
+  --font-sans: "IBM Plex Sans", "Noto Sans TC", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
 }
 
 html {
@@ -16,30 +20,134 @@ html {
 
 body {
   background-color: var(--color-base);
-  color: #c4cdd9;
+  color: var(--color-ink);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
 }
 
-/* subtle blueprint grid over the whole page */
-.bg-grid {
-  background-image:
-    linear-gradient(rgba(45, 214, 232, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(45, 214, 232, 0.04) 1px, transparent 1px);
-  background-size: 48px 48px;
-  mask-image: linear-gradient(to bottom, black 0%, black 60%, transparent 100%);
+::selection {
+  background: rgba(198, 244, 50, 0.85);
+  color: #08090b;
+}
+
+/* ── atmosphere layers ──────────────────────────────── */
+
+/* film grain */
+.noise {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+  opacity: 0.05;
+}
+
+/* CRT scanlines */
+.scanlines {
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0px,
+    transparent 3px,
+    rgba(0, 0, 0, 0.18) 3px,
+    rgba(0, 0, 0, 0.18) 4px
+  );
+  opacity: 0.35;
+}
+
+/* dot-matrix grid, fades out down the page */
+.dotgrid {
+  background-image: radial-gradient(rgba(198, 244, 50, 0.07) 1px, transparent 1px);
+  background-size: 28px 28px;
+  mask-image: linear-gradient(to bottom, black 0%, black 45%, transparent 90%);
 }
 
 /* hero glow */
 .glow {
   background: radial-gradient(
-    ellipse 60% 50% at 50% -10%,
-    rgba(45, 214, 232, 0.14),
+    ellipse 65% 45% at 30% -5%,
+    rgba(198, 244, 50, 0.1),
     transparent 70%
   );
 }
 
-::selection {
-  background: rgba(45, 214, 232, 0.3);
-  color: #ffffff;
+/* ── technical details ──────────────────────────────── */
+
+/* four corner brackets, blueprint style */
+.corner-frame {
+  --c: rgba(198, 244, 50, 0.45);
+  --s: 12px;
+  --t: 1px;
+  background-image:
+    linear-gradient(var(--c), var(--c)), linear-gradient(var(--c), var(--c)),
+    linear-gradient(var(--c), var(--c)), linear-gradient(var(--c), var(--c)),
+    linear-gradient(var(--c), var(--c)), linear-gradient(var(--c), var(--c)),
+    linear-gradient(var(--c), var(--c)), linear-gradient(var(--c), var(--c));
+  background-position:
+    0 0, 0 0,
+    100% 0, 100% 0,
+    0 100%, 0 100%,
+    100% 100%, 100% 100%;
+  background-size:
+    var(--s) var(--t), var(--t) var(--s),
+    var(--s) var(--t), var(--t) var(--s),
+    var(--s) var(--t), var(--t) var(--s),
+    var(--s) var(--t), var(--t) var(--s);
+  background-repeat: no-repeat;
+}
+
+/* gauge tick ruler */
+.ticks {
+  background-image: repeating-linear-gradient(
+    to right,
+    rgba(198, 244, 50, 0.35) 0px,
+    rgba(198, 244, 50, 0.35) 1px,
+    transparent 1px,
+    transparent 8px
+  );
+}
+
+/* hollow ghost numerals */
+.ghost {
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(200, 208, 217, 0.1);
+}
+
+/* ── motion ─────────────────────────────────────────── */
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal {
+  animation: rise 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+@keyframes blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+.cursor {
+  animation: blink 1.1s step-end infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(198, 244, 50, 0.6); }
+  60% { box-shadow: 0 0 0 5px rgba(198, 244, 50, 0); }
+}
+
+.pulse {
+  animation: pulse-dot 2s ease-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .cursor, .pulse {
+    animation: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
 }

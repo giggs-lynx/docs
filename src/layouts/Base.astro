@@ -8,6 +8,15 @@ interface Props {
 }
 
 const { lang, title, description } = Astro.props;
+const fontFamilies = [
+  'family=Chakra+Petch:wght@500;600;700',
+  'family=IBM+Plex+Sans:wght@400;500;600',
+  'family=IBM+Plex+Mono:wght@400;500',
+];
+if (lang === 'zh-Hant') {
+  fontFamilies.push('family=Noto+Sans+TC:wght@400;500;700');
+}
+const fontHref = `https://fonts.googleapis.com/css2?${fontFamilies.join('&')}&display=swap`;
 ---
 
 <!doctype html>
@@ -20,12 +29,10 @@ const { lang, title, description } = Astro.props;
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="profile" />
+    <meta name="theme-color" content="#08090b" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
+    <link href={fontHref} rel="stylesheet" />
   </head>
   <body class="min-h-screen">
     <slot />
